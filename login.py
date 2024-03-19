@@ -49,7 +49,7 @@ class Login_window:
         self.txtpass=ttk.Entry(frame,font=("times new roman",15,"bold"))
         self.txtpass.place(x=40,y=255,width=270)
 
-        # ===Icone Image =====
+        # ===Icone Image =========
         img2 = Image.open("college_images/LoginIconAppl.png")
         img2 = img2.resize((25, 25), Image.LANCZOS)
         self.photoimg2 = ImageTk.PhotoImage(img2)
