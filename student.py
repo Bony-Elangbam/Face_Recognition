@@ -139,8 +139,6 @@ class Student:
         classDiv_label=Label(class_student_frame,text="Class Division:",font=("times new roman",13,"bold"),bg="white")
         classDiv_label.grid(row=1,column=0,padx=10,pady=5,sticky=W)
 
-        # classDiv_entry=ttk.Entry(class_student_frame,textvariable=self.var_div,width=20,font=("times new roman",13,"bold"))
-        # classDiv_entry.grid(row=1,column=1,padx=10,pady=5,sticky=W)
         div_combo=ttk.Combobox(class_student_frame,textvariable=self.var_div,font=("times new roman",13,"bold"),state="readonly",width=18)
         div_combo["values"]=("Select Division","A","B","C")
         div_combo.current(0)
@@ -158,8 +156,6 @@ class Student:
         gender_label=Label(class_student_frame,text="Gender:",font=("times new roman",13,"bold"),bg="white")
         gender_label.grid(row=2,column=0,padx=10,pady=5,sticky=W)
 
-        # gender_entry=ttk.Entry(class_student_frame,textvariable=self.var_gender,width=20,font=("times new roman",13,"bold"))
-        # gender_entry.grid(row=2,column=1,padx=10,pady=5,sticky=W)
         gender_combo=ttk.Combobox(class_student_frame,textvariable=self.var_gender,font=("times new roman",13,"bold"),state="readonly",width=18)
         gender_combo["values"]=("Select Gender","Male","Female","Other")
         gender_combo.current(0)
@@ -216,11 +212,8 @@ class Student:
         save_btn=Button(btn_frame,text="Save",command=self.add_data,width=17,font=("times new roman",13,"bold"),bg="blue",fg="Black")
         save_btn.grid(row=0,column=0)
 
-        # update_btn=Button(btn_frame,text="Update",width=17,font=("times new roman",13,"bold"),bg="blue",fg="Black")
-        # update_btn.grid(row=0,column=1)
         update_btn=Button(btn_frame,text="Update",command=self.update_data,width=17,font=("times new roman",13,"bold"),bg="blue",fg="Black")
         update_btn.grid(row=0,column=1)
-
 
         delete_btn=Button(btn_frame,text="Delete",command=self.delete_data,width=17,font=("times new roman",13,"bold"),bg="blue",fg="Black")
         delete_btn.grid(row=0,column=2)
@@ -519,10 +512,7 @@ class Student:
 
                 def face_cropped(img):
                     gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-                    # faces=face_classifier.detectMultiScale(gray,scaleFactor=1.3,Neighbors=5)
                     faces=face_classifier.detectMultiScale(gray,1.3,5)
-                    #scaling factor=1.3
-                    #minimum neighbor=5
 
                     for (x,y,w,h) in faces:
                         face_cropped=img[y:y+h,x:x+w]

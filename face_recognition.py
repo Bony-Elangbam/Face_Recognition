@@ -54,9 +54,6 @@ class Face_Recognition:
                 dtString=now.strftime("%H:%M:%S")
                 f.writelines(f"{i},{r},{n},{d},{dtString},{d1},Present\n")
 
-
-
-
     # ==== Face Recognition =======
     def face_recog(self):
         def draw_boundary(img,classifier,scaleFactor,minNeighbors,color,text,clf):

@@ -39,32 +39,6 @@ class Train:
         f_lbl = Label(self.root, image=self.photoimg_bottom)
         f_lbl.place(x=0,y=440,width=1530,height=325)
 
-
-    # def train_classifier(self):
-    #     data_dir=("data")
-    #     path=[ os.path.join (data_dir,file) for file in os.listdir(data_dir) if not file.startswith('.DS_Store')]
-
-    #     faces=[]
-    #     ids=[]
-
-    #     for image in path:
-    #         img=Image.open(image).convert('L')  # convert image to gray scale
-    #         imageNP=np.array(img,'uint8')
-    #         id=int(os.path.split(image)[1].split('.')[1]) # extract the unique identifier from the filename
-            
-    #         faces.append(imageNP)
-    #         ids.append(id)
-    #         cv2.imshow("Training",imageNP)
-    #         cv2.waitKey(1)==13
-    #     ids=np.array(ids)
-
-    #     # ============== Train the classifier And save =======
-    #     cv2.face.LBPHFaceRecognizer_create()
-    #     clf.train(faces,ids)
-    #     clf.write("classifier.xml") # Save The Classifier
-    #     cv2.destroyAllWindows()
-    #     messagebox.showinfo("Result","Classifier Trained Successfully!")
-
     def train_classifier(self):
         data_dir = "data"
         path = [os.path.join(data_dir, file) for file in os.listdir(data_dir) if not file.startswith('.DS_Store')]
@@ -90,16 +64,6 @@ class Train:
         clf.write("classifier.xml")  # Write The Classifier
         cv2.destroyAllWindows()
         messagebox.showinfo("Result", "Classifier Trained Successfully!")
-
-
-
-        
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

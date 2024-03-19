@@ -140,8 +140,6 @@ class Attendance:
         reset_btn=Button(btn_frame,text="Reset",command=self.reset_data,width=20,font=("times new roman",13,"bold"),bg="blue",fg="Black")
         reset_btn.grid(row=0,column=3)
 
-    
-
         # right label frame
         Right_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Attendance Details",font=("times new roman",12,"bold"))
         Right_frame.place(x=750,y=10,width=720,height=580)
@@ -237,13 +235,6 @@ class Attendance:
             self.var_atten_time.set("")
             self.var_atten_date.set("")
             self.var_atten_attendance.set("")
-
-        
-
-
-
-
-
 
 
 if __name__ == "__main__":

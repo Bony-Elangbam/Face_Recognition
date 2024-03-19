@@ -47,8 +47,6 @@ class Developer:
         f_lbl.place(x=0,y=210,width=500,height=390)
 
 
-
-
 if __name__ == "__main__":
     root = Tk()
     obj = Developer(root)
